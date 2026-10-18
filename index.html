@@ -111,7 +111,7 @@
         
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 2: Redacta como segundo paso los Métodos y Materiales, detallando exactamente los pasos que seguiste para obtener los resultados, de tal manera que el estudio sea reproducible.</p>
+         <p> Paso 2: Redacta como segundo paso los Métodos y Materiales, detallando exactamente los pasos que seguiste para obtener los resultados, de tal manera que el estudio sea reproducible.[...]
          <audio data-autoplay src="audio/audio7.mp3"></audio>
         </section>
 
@@ -123,19 +123,19 @@
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antecedentes y el objetivo de la investigación.</p>
+         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antec[...]
          <audio data-autoplay src="audio/audio9.mp3"></audio>
         </section>
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté terminado.</p>
+         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero est[...]
          <audio data-autoplay src="audio/audio10.mp3"></audio>
         </section>
 
         <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas cumplan las normas exigidas por la revista. </p>
+         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias b[...]
          <audio data-autoplay src="audio/audio11.mp3"></audio>
         </section>
              <section>
@@ -156,6 +156,45 @@
         transition: 'slide',
         slideNumber: true,
         embedded: false
+      });
+    </script>
+
+    <script>
+      // Script para reproducir el audio de la diapositiva activa y manejar el bloqueo de autoplay
+      function playSlideAudio(event) {
+        const currentSlide = event && event.currentSlide ? event.currentSlide : Reveal.getCurrentSlide();
+
+        // Pausar y reiniciar todos los audios
+        document.querySelectorAll('audio').forEach(a => {
+          try { a.pause(); } catch(e) {}
+          try { a.currentTime = 0; } catch(e) {}
+          // ocultar controles por defecto; se mostrarán si autoplay es bloqueado
+          a.controls = false;
+        });
+
+        // Buscar audio en la diapositiva actual y reproducirlo
+        const audio = currentSlide ? currentSlide.querySelector('audio') : null;
+        if (audio) {
+          audio.play().catch(err => {
+            console.log('Reproducción automática bloqueada por el navegador:', err);
+            // Permitir que el usuario reproduzca manualmente
+            audio.controls = true;
+          });
+        }
+      }
+
+      // Ejecutar al cargar la presentación y al cambiar de diapositiva
+      Reveal.on('ready', playSlideAudio);
+      Reveal.on('slidechanged', playSlideAudio);
+
+      // A veces se requiere una interacción del usuario; aprovecha el primer clic/tap
+      document.addEventListener('pointerdown', function handleGesture() {
+        const audio = Reveal.getCurrentSlide().querySelector('audio');
+        if (audio && audio.paused) {
+          audio.play().catch(() => {});
+        }
+        // solo necesitamos esto una vez
+        document.removeEventListener('pointerdown', handleGesture);
       });
     </script>
   </body>

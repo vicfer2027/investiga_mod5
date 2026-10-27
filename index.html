@@ -11,116 +11,67 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
-    <style>
-      html, body {
+
+<style>
+      body {
         margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden;
+        overflow: hidden;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      /* Burgundy / red-wine slide background (override the 'black' theme) */
-      .reveal,
-      .reveal .slides,
-      .reveal .slides section,
-      .reveal .backgrounds {
-        background-color: #6B0B0B !important;
-        color: #ffffff;
-      }
-
+      /* Ajuste responsivo para el contenedor principal */
       .reveal {
         width: 100%;
         height: 100vh;
       }
 
-      .reveal section {
-        text-align: center;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding: 12px;
-        overflow: hidden;
-      }
-
-      .reveal .slides section img {
+      /* Corrección crítica para las imágenes en Android */
+      .reveal img {
+        max-width: 90% !important;
+        max-height: 45vh !important; /* Reducido ligeramente para dejar espacio al texto */
+        object-fit: contain !important;
         display: block;
-        width: auto;
-        max-width: 100%;
-        max-height: 75vh;
-        height: auto;
-        object-fit: contain;
-        margin: 20px auto;
+        margin: 10px auto !important;
       }
 
       .reveal audio {
         display: block;
         margin: 10px auto;
-        max-width: 100%;
       }
 
-      @media (max-width: 768px) {
-        .reveal {
-          width: 100%;
-          height: 100dvh;
+      /* ======================================================= */
+      /* CONFIGURACIÓN DE TEXTO RESPONSIVO PARA MÓVILES (NUEVO) */
+      /* ======================================================= */
+      
+      /* Tamaños por defecto (Computadoras y pantallas grandes) */
+      .reveal h2 { font-size: 2.2em !important; }
+      .reveal h3 { font-size: 1.8em !important; }
+      .reveal p { font-size: 1.1em !important; line-height: 1.4; }
+
+      /* Ajustes exclusivos para Pantallas de Celulares (Móviles) */
+      @media screen and (max-width: 768px) {
+        .reveal h2 {
+          font-size: 1.3em !important; /* Reduce el título principal */
+          margin-bottom: 15px !important;
+          padding: 0 10px;
         }
 
-        .reveal .slides,
-        .reveal .slides section {
-          width: 100%;
-          max-width: 100vw;
-          min-width: 0;
-          height: auto;
-          min-height: 100dvh;
+        .reveal h3 {
+          font-size: 1.1em !important; /* Reduce los títulos de los pasos */
+          margin-bottom: 10px !important;
+          padding: 0 10px;
         }
 
-        .reveal .slides section {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          padding: 8px 10px 24px;
-          box-sizing: border-box;
-          overflow: hidden;
-        }
-
-        .reveal .slides section img {
-          width: 100%;
-          max-width: 100%;
-          max-height: 58vh;
-          height: auto;
-          margin: 10px auto;
-          object-fit: contain;
-        }
-
-        .reveal .slides section > div[style*="display: flex"] {
-          display: flex !important;
-          flex-direction: column !important;
-          align-items: center !important;
-          gap: 12px !important;
-          width: 100%;
-        }
-
-        .reveal .slides section > div[style*="display: flex"] img {
-          width: auto;
-          max-width: 100%;
-          max-height: 28vh;
-          height: auto;
-          flex-shrink: 0;
-        }
-
-        .reveal .slides section > div[style*="display: flex"] p {
-          width: 100%;
-          font-size: 0.72em !important;
-          line-height: 1.4;
+        .reveal p {
+          font-size: 0.75em !important; /* Tamaño ideal para que los textos largos quepan en Android */
+          line-height: 1.3 !important;
+          padding: 0 15px !important;
+          margin: 10px 0 !important;
         }
       }
     </style>
-  </head>
+U
+    
+     </head>
 
   <body>
     <div class="reveal">

@@ -17,7 +17,14 @@
         margin: 0;
         overflow: hidden;
       }
-
+ /* Burgundy / red-wine slide background (override the 'black' theme) */
+      .reveal,
+      .reveal .slides,
+      .reveal .slides section,
+      .reveal .backgrounds {
+        background-color: #6B0B0B !important;
+        color: #ffffff;
+      }
       /* Ajuste responsivo para el contenedor principal */
       .reveal {
         width: 100%;
@@ -132,8 +139,8 @@ U
          <section>
         <h4>Ejemplo 1: Revisión sistemática en administración de empresas</h4>
         <audio data-autoplay src="audio/audio8.mp3"></audio>
-       <p style="font-size: 0.9em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas del Beni.</i></p>
-       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y motivación— sobre la productividad y competitividad de las PyMEs del Beni?</p>
+       <p style="font-size: 0.6em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas del Beni.</i></p>
+       <p style="font-size: 0.6em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y motivación— sobre la productividad y competitividad de las PyMEs del Beni?</p>
       </section>
 
          <section>
@@ -175,10 +182,11 @@ U
          <!-- Contenedor Flexbox -->
     <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 40px;">
    <!-- Columna del Icono -->
-        <img src="graficos/grafico8.png" alt="scoping" style="height: 7em; width: auto; flex-shrink: 0;">
+        <img src="graficos/grafico8.png" alt="scoping" style="height: 5em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
         <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
-            La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación.
+            La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación.<br>
+          Para la investigación se recomienda aplicar las directrices metodológicas de Instituto Joanna Briggs (<a href="https://jbi-global-wiki.refined.site/space/MANUAL/355862619/10.2+How+to+conduct+a+scoping+review" target="_blank">JBI </a>) y para el reporte se deben cumplir el estándar <a href="https://www.prisma-statement.org/" target="_blank"> PRISMA-ScR </a> para revisiones de alcance.</p>
          </div>
           </section>
 

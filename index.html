@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <title>Mi Presentación con Audio</title>
 
@@ -11,74 +11,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
-
-<style>
+    <style>
       body {
         margin: 0;
-        overflow: hidden;
       }
- /* Burgundy / red-wine slide background (override the 'black' theme) */
-      .reveal,
-      .reveal .slides,
-      .reveal .slides section,
-      .reveal .backgrounds {
-        background-color: #6B0B0B !important;
-        color: #ffffff;
-      }
-      /* Ajuste responsivo para el contenedor principal */
+
+  /* Burgundy / red-wine slide background (override the 'black' theme) */
+    .reveal,
+    .reveal .slides,
+    .reveal .slides section,
+    .reveal .backgrounds {
+      background-color: #6B0B0B !important; /* burgundy/wine — try #6B0B0B, #800020, or #5B0E0E */
+      color: #ffffff; /* ensure text is readable */
+    }
+      
       .reveal {
         width: 100%;
         height: 100vh;
       }
 
-      /* Corrección crítica para las imágenes en Android */
+      .reveal section {
+        text-align: center;
+      }
+
       .reveal img {
-        max-width: 90% !important;
-        max-height: 45vh !important; /* Reducido ligeramente para dejar espacio al texto */
-        object-fit: contain !important;
+        max-width: 80%;
+        max-height: 60vh;
         display: block;
-        margin: 10px auto !important;
+        margin: 20px auto;
       }
 
       .reveal audio {
         display: block;
         margin: 10px auto;
       }
-
-      /* ======================================================= */
-      /* CONFIGURACIÓN DE TEXTO RESPONSIVO PARA MÓVILES (NUEVO) */
-      /* ======================================================= */
-      
-      /* Tamaños por defecto (Computadoras y pantallas grandes) */
-      .reveal h2 { font-size: 2.2em !important; }
-      .reveal h3 { font-size: 1.8em !important; }
-      .reveal p { font-size: 1.1em !important; line-height: 1.4; }
-
-      /* Ajustes exclusivos para Pantallas de Celulares (Móviles) */
-      @media screen and (max-width: 768px) {
-        .reveal h2 {
-          font-size: 1.1em !important; /* Reduce el título principal */
-          margin-bottom: 15px !important;
-          padding: 0 10px;
-        }
-
-        .reveal h3 {
-          font-size: 1.0em !important; /* Reduce los títulos de los pasos */
-          margin-bottom: 10px !important;
-          padding: 0 10px;
-        }
-
-        .reveal p {
-          font-size: 0.75em !important; /* Tamaño ideal para que los textos largos quepan en Android */
-          line-height: 1.3 !important;
-          padding: 0 15px !important;
-          margin: 10px 0 !important;
-        }
-      }
     </style>
-U
-    
-     </head>
+  </head>
 
   <body>
     <div class="reveal">
@@ -103,7 +71,7 @@ U
         <section>
           <h4>Funciones de un artículo de revisión</h4>
             <audio data-autoplay src="audio/audio3.mp3"></audio>
-    
+  
        <p style="font-size: 0.9em; text-align: left;">* Sintetizar el conocimiento y reunir los principales hallazgos de investigaciones dispersas.</p>
        <p style="font-size: 0.9em; text-align: left;">* Comparar resultados e identificar coincidencias, contradicciones y diferencias entre estudios.</p>
         <p style="font-size: 0.9em; text-align: left;">* Evaluar la evidencia y analizar la solidez de los métodos, los datos y las conclusiones de las investigaciones.</p>
@@ -115,7 +83,7 @@ U
         <audio data-autoplay src="audio/audio4.mp3"></audio>
        <p style="font-size: 0.9em; text-align: left;">* Identificar vacíos de conocimiento y reconocer preguntas que todavía no tienen respuestas suficientes</p>
        <p style="font-size: 0.9em; text-align: left;">* Orientar nuevas investigaciones y proponer hipótesis, preguntas y líneas de investigación futuras.</p>
-       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones.</p>
+       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones sociales y ambientales.</p>
            </section>
 
         <section>
@@ -139,8 +107,8 @@ U
          <section>
         <h4>Ejemplo 1: Revisión sistemática en administración de empresas</h4>
         <audio data-autoplay src="audio/audio8.mp3"></audio>
-       <p style="font-size: 0.6em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas del Beni.</i></p>
-       <p style="font-size: 0.6em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y motivación— sobre la productividad y competitividad de las PyMEs del Beni?</p>
+       <p style="font-size: 0.9em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas en el Departamento del Beni.</i></p>
+       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación del desempeño, incentivos y selección de personal— sobre el desempeño financiero y operativo de las pequeñas y medianas empresas en el Beni?</p>
       </section>
 
          <section>
@@ -151,9 +119,9 @@ U
    <!-- Columna del Icono -->
         <img src="graficos/grafico7.png" alt="Seleccion" style="height: 7em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
-        <p style="text-align: left; margin: 0; font-size: 0.6em; line-height: 1.4;">
+        <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
             Para llevar a cabo esta revisión sistemática, el investigador debe buscar estudios 
-            empíricos que analicen prácticas de recursos humanos y resultados empresariales en PyMES del Beni, consultando en diversas bases de datos de artículos científicos y otras fuentes.
+            empíricos que analicen prácticas de recursos humanos y resultados empresariales en PyMES del Beni, consultando en diversas bases de datos de artículos científicos y otras fuentes confiables y seleccionando los más relevantes. </p>
          </div>
            </section>
 
@@ -165,36 +133,32 @@ U
    <!-- Columna del Icono -->
         <img src="graficos/grafico6.png" alt="Filtro" style="height: 7em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
-        <p style="text-align: left; margin: 0; font-size: 0.6em; line-height: 1.4;">
-             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, innovación y clima organizacional.
+        <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
+             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, crecimiento de ventas, innovación y desempeño operativo. <br> Una vez terminada, la revisión permitirá identificar las prácticas asociadas con mejores resultados, la consistencia de la evidencia y las limitaciones de los estudios disponibles.</p>
          </div>
            </section>
 
      <section>
            <h4>Revisión de alcance (Scoping review)</h4>
         <audio data-autoplay src="audio/audio11.mp3"></audio>
-     <p style="font-size: 0.7em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema. Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que sirve como base para investigaciones posteriores.</p>
+     <p style="font-size: 0.8em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema, campo, concepto o problema en particular. <br>
+Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que se ha investigado en diversos contextos, los diferentes conceptos, tendencias, metodologías y debates vigentes, además de detectar vacíos de investigación  .</p>
+        </section>
+                   <h4>Revisión de alcance </h4>
+          <img src="graficos/grafico8.png" alt="tipos1">
+          <audio data-autoplay src="audio/audio12.mp3"></audio>
+     <p style="font-size: 0.8em; text-align: left;"> La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación y reportar los resultados, asegurando la transparencia, la reproducibilidad y la coherencia entre la pregunta de investigación, los objetivos, métodos y resultados. <br> Para la investigación se recomienda aplicar las directrices metodológicas de Instituto Joanna Briggs (JBI) y para el reporte se deben cumplir el estándar PRISMA-ScR para revisiones de alcance.</p>
+        </section>
+       <section>
+       <h3> Orden de redacción recomendable </h3>
+     
+      
+         
         </section>
         
-        <section>
-              <h4>Revisión de alcance </h4>
-            <audio data-autoplay src="audio/audio12.mp3"></audio>
-         <!-- Contenedor Flexbox -->
-    <div style="display: flex; align-items: center; justify-content: center; gap: 30px; margin-top: 40px;">
-   <!-- Columna del Icono -->
-        <img src="graficos/grafico8.png" alt="scoping" style="height: 5em; width: auto; flex-shrink: 0;">
-   <!-- Columna del Texto -->
-        <p style="text-align: left; margin: 0; font-size: 0.5em; line-height: 1.4;">
-            La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación.<br>
-          Para la investigación se recomienda aplicar las directrices metodológicas de Instituto Joanna Briggs (<a href="https://jbi-global-wiki.refined.site/space/MANUAL/355862619/10.2+How+to+conduct+a+scoping+review" target="_blank">JBI </a>) y para el reporte se deben cumplir el estándar <a href="https://www.prisma-statement.org/" target="_blank"> PRISMA-ScR </a> para revisiones de alcance.</p>
-         </div>
-          </section>
-
-
-       
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 2: Redacta como segundo paso los Métodos y Materiales, detallando exactamente los pasos que seguiste para obtener los resultados, de tal manera que el estudio sea reproducible.</p>
+         <p> Paso 2: Redacta como segundo paso los Métodos y Materiales, detallando exactamente los pasos que seguiste para obtener los resultados, de tal manera que el estudio sea reproducible.[...]
      
         </section>
 
@@ -206,19 +170,19 @@ U
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antecedentes y la justificación del estudio.</p>
+         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antec[...]
      
         </section>
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté ya estructurado.</p>
+         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero est[...]
  
         </section>
 
         <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas estén actualizadas y sean consistentes.</p>
+         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias b[...]
    
         </section>
              <section>
@@ -282,3 +246,4 @@ U
     </script>
   </body>
 </html>
+

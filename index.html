@@ -16,42 +16,15 @@
         margin: 0;
       }
 
-  /* Burgundy / red-wine slide background (override the 'black' theme) */
-    .reveal,
-    .reveal .slides,
-    .reveal .slides section,
-    .reveal .backgrounds {
-      background-color: #6B0B0B !important; /* burgundy/wine — try #6B0B0B, #800020, or #5B0E0E */
-      color: #ffffff; /* ensure text is readable */
-    }
-      .reveal img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  max-height: 75vh;
-  height: auto;
-  object-fit: contain;
-  margin: 20px auto;
-}
+      /* Burgundy / red-wine slide background (override the 'black' theme) */
+      .reveal,
+      .reveal .slides,
+      .reveal .slides section,
+      .reveal .backgrounds {
+        background-color: #6B0B0B !important; /* burgundy/wine — try #6B0B0B, #800020, or #5B0E0E */
+        color: #ffffff; /* ensure text is readable */
+      }
 
-@media (max-width: 768px) {
-  .reveal section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-  }
-
-  .reveal img {
-    width: 100vw;
-    max-width: 100vw;
-    max-height: 100vh;
-    height: auto;
-    margin: 0;
-    object-fit: contain;
-  }
-}
       .reveal {
         width: 100%;
         height: 100vh;
@@ -64,7 +37,7 @@
         padding: 12px;
       }
 
-      .reveal img {
+      .reveal .slides section img {
         display: block;
         width: 100%;
         max-width: 100%;
@@ -83,21 +56,23 @@
         .reveal,
         .reveal .slides,
         .reveal .slides section {
-          width: 100vw;
-          height: 100vh;
+          width: 100%;
+          height: auto;
+          min-height: 100vh;
         }
 
-        .reveal section {
-          padding: 8px;
+        .reveal .slides section {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          padding: 8px;
+          box-sizing: border-box;
         }
 
-        .reveal img {
-          width: 100vw;
-          max-width: 100vw;
+        .reveal .slides section img {
+          width: 100%;
+          max-width: 100%;
           max-height: 100vh;
           height: auto;
           margin: 0;
@@ -130,7 +105,7 @@
         <section>
           <h4>Funciones de un artículo de revisión</h4>
             <audio data-autoplay src="audio/audio3.mp3"></audio>
-  
+   
        <p style="font-size: 0.9em; text-align: left;">* Sintetizar el conocimiento y reunir los principales hallazgos de investigaciones dispersas.</p>
        <p style="font-size: 0.9em; text-align: left;">* Comparar resultados e identificar coincidencias, contradicciones y diferencias entre estudios.</p>
         <p style="font-size: 0.9em; text-align: left;">* Evaluar la evidencia y analizar la solidez de los métodos, los datos y las conclusiones de las investigaciones.</p>
@@ -142,7 +117,7 @@
         <audio data-autoplay src="audio/audio4.mp3"></audio>
        <p style="font-size: 0.9em; text-align: left;">* Identificar vacíos de conocimiento y reconocer preguntas que todavía no tienen respuestas suficientes</p>
        <p style="font-size: 0.9em; text-align: left;">* Orientar nuevas investigaciones y proponer hipótesis, preguntas y líneas de investigación futuras.</p>
-       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones sociales y ambientales.</p>
+       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones y decisiones basadas en datos probados.</p>
            </section>
 
         <section>
@@ -166,8 +141,8 @@
          <section>
         <h4>Ejemplo 1: Revisión sistemática en administración de empresas</h4>
         <audio data-autoplay src="audio/audio8.mp3"></audio>
-       <p style="font-size: 0.9em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas en el Departamento del Beni.</i></p>
-       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación del desempeño, incentivos y selección de personal— sobre el desempeño financiero y operativo de las pequeñas y medianas empresas en el Beni?</p>
+       <p style="font-size: 0.9em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas del Beni.</i></p>
+       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y compensación— sobre la productividad y rentabilidad de las PYMES?</p>
       </section>
 
          <section>
@@ -180,7 +155,7 @@
    <!-- Columna del Texto -->
         <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
             Para llevar a cabo esta revisión sistemática, el investigador debe buscar estudios 
-            empíricos que analicen prácticas de recursos humanos y resultados empresariales en PyMES del Beni, consultando en diversas bases de datos de artículos científicos y otras fuentes confiables y seleccionando los más relevantes. </p>
+            empíricos que analicen prácticas de recursos humanos y resultados empresariales en PyMES del Beni, consultando en diversas bases de datos de artículos científicos y otras fuentes.
          </div>
            </section>
 
@@ -193,15 +168,15 @@
         <img src="graficos/grafico6.png" alt="Filtro" style="height: 7em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
         <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
-             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, crecimiento de ventas, innovación y desempeño operativo. <br> Una vez terminada, la revisión permitirá identificar las prácticas asociadas con mejores resultados, la consistencia de la evidencia y las limitaciones de los estudios disponibles.</p>
+             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, innovación y desempeño laboral.
          </div>
            </section>
 
      <section>
            <h4>Revisión de alcance (Scoping review)</h4>
         <audio data-autoplay src="audio/audio11.mp3"></audio>
-     <p style="font-size: 0.8em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema, campo, concepto o problema en particular. <br>
-Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que se ha investigado en diversos contextos, los diferentes conceptos, tendencias, metodologías y debates vigentes, además de detectar vacíos de investigación.</p>
+     <p style="font-size: 0.8em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema determinado.</p>
+ Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que sirve como base para futuras investigaciones.
         </section>
         
         <section>
@@ -213,7 +188,7 @@ Por tratarse de una revisión exploratoria, no llega a estimar efectos entre var
         <img src="graficos/grafico8.png" alt="scoping" style="height: 7em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
         <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
-            La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación y reportar los resultados, asegurando la transparencia, la reproducibilidad y la coherencia entre la pregunta de investigación, los objetivos, métodos y resultados. <br> Para la investigación se recomienda aplicar las directrices metodológicas de Instituto Joanna Briggs (<a href="https://jbi-global-wiki.refined.site/space/MANUAL/355862619/10.2+How+to+conduct+a+scoping+review" target="_blank">JBI</a>) y para el reporte se debe cumplir el estándar <a href="https://www.prisma-statement.org/scoping" target="_blank"> PRISMA-ScR </a> para revisiones de alcance.</p>
+            La calidad de una revisión de alcance depende de la información consultada y del cumplimiento de directrices y estándares metodológicos rigurosos para llevar a cabo la investigación.
          </div>
           </section>
 
@@ -233,19 +208,19 @@ Por tratarse de una revisión exploratoria, no llega a estimar efectos entre var
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antecedentes, la justificación y la contribución esperada del estudio.</p>
+         <p> Paso 4: Escríbe la introducción casi al final del proceso; ahora que sabes exactamente qué descubriste y cómo lo discutiste, puedes plantear con precisión el problema, los antecedentes y la justificación del estudio.</p>
      
         </section>
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté completo y revisado cuidadosamente.</p>
+         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté terminado.</p>
  
         </section>
 
         <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas sean consistentes y estén actualizadas.</p>
+         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas estén actualizadas.</p>
    
         </section>
              <section>

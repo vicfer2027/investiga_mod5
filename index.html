@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
     <title>Mi Presentación con Audio</title>
 
@@ -12,8 +12,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css">
 
     <style>
-      body {
+      html, body {
         margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
+
+      * {
+        box-sizing: border-box;
       }
 
       /* Burgundy / red-wine slide background (override the 'black' theme) */
@@ -21,8 +29,8 @@
       .reveal .slides,
       .reveal .slides section,
       .reveal .backgrounds {
-        background-color: #6B0B0B !important; /* burgundy/wine — try #6B0B0B, #800020, or #5B0E0E */
-        color: #ffffff; /* ensure text is readable */
+        background-color: #6B0B0B !important;
+        color: #ffffff;
       }
 
       .reveal {
@@ -33,13 +41,15 @@
       .reveal section {
         text-align: center;
         width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
         padding: 12px;
+        overflow: hidden;
       }
 
       .reveal .slides section img {
         display: block;
-        width: 100%;
+        width: auto;
         max-width: 100%;
         max-height: 75vh;
         height: auto;
@@ -50,15 +60,22 @@
       .reveal audio {
         display: block;
         margin: 10px auto;
+        max-width: 100%;
       }
 
       @media (max-width: 768px) {
-        .reveal,
+        .reveal {
+          width: 100%;
+          height: 100dvh;
+        }
+
         .reveal .slides,
         .reveal .slides section {
           width: 100%;
+          max-width: 100vw;
+          min-width: 0;
           height: auto;
-          min-height: 100vh;
+          min-height: 100dvh;
         }
 
         .reveal .slides section {
@@ -66,17 +83,40 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          padding: 8px;
+          padding: 8px 10px 24px;
           box-sizing: border-box;
+          overflow: hidden;
         }
 
         .reveal .slides section img {
           width: 100%;
           max-width: 100%;
-          max-height: 100vh;
+          max-height: 58vh;
           height: auto;
-          margin: 0;
+          margin: 10px auto;
           object-fit: contain;
+        }
+
+        .reveal .slides section > div[style*="display: flex"] {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          gap: 12px !important;
+          width: 100%;
+        }
+
+        .reveal .slides section > div[style*="display: flex"] img {
+          width: auto;
+          max-width: 100%;
+          max-height: 28vh;
+          height: auto;
+          flex-shrink: 0;
+        }
+
+        .reveal .slides section > div[style*="display: flex"] p {
+          width: 100%;
+          font-size: 0.72em !important;
+          line-height: 1.4;
         }
       }
     </style>
@@ -105,7 +145,7 @@
         <section>
           <h4>Funciones de un artículo de revisión</h4>
             <audio data-autoplay src="audio/audio3.mp3"></audio>
-   
+    
        <p style="font-size: 0.9em; text-align: left;">* Sintetizar el conocimiento y reunir los principales hallazgos de investigaciones dispersas.</p>
        <p style="font-size: 0.9em; text-align: left;">* Comparar resultados e identificar coincidencias, contradicciones y diferencias entre estudios.</p>
         <p style="font-size: 0.9em; text-align: left;">* Evaluar la evidencia y analizar la solidez de los métodos, los datos y las conclusiones de las investigaciones.</p>
@@ -117,7 +157,7 @@
         <audio data-autoplay src="audio/audio4.mp3"></audio>
        <p style="font-size: 0.9em; text-align: left;">* Identificar vacíos de conocimiento y reconocer preguntas que todavía no tienen respuestas suficientes</p>
        <p style="font-size: 0.9em; text-align: left;">* Orientar nuevas investigaciones y proponer hipótesis, preguntas y líneas de investigación futuras.</p>
-       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones y decisiones basadas en datos probados.</p>
+       <p style="font-size: 0.9em; text-align: left;">* Apoyar la toma de decisiones al aportar evidencia organizada para el diseño de políticas públicas, estrategias empresariales o intervenciones.</p>
            </section>
 
         <section>
@@ -142,7 +182,7 @@
         <h4>Ejemplo 1: Revisión sistemática en administración de empresas</h4>
         <audio data-autoplay src="audio/audio8.mp3"></audio>
        <p style="font-size: 0.9em; text-align: left;"><strong>Tema:</strong> <i>Efectos de las prácticas de gestión de recursos humanos sobre el desempeño de las pequeñas y medianas empresas del Beni.</i></p>
-       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y compensación— sobre la productividad y rentabilidad de las PYMES?</p>
+       <p style="font-size: 0.9em; text-align: left;"><strong>Pregunta de investigación:</strong> ¿Qué efectos tienen las prácticas de gestión de recursos humanos —capacitación, evaluación y motivación— sobre la productividad y competitividad de las PyMEs del Beni?</p>
       </section>
 
          <section>
@@ -168,15 +208,14 @@
         <img src="graficos/grafico6.png" alt="Filtro" style="height: 7em; width: auto; flex-shrink: 0;">
    <!-- Columna del Texto -->
         <p style="text-align: left; margin: 0; font-size: 0.7em; line-height: 1.4;">
-             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, innovación y desempeño laboral.
+             Los estudios seleccionados deben evaluarse en forma crítica, clasificando los resultados y sintetizando los hallazgos, tomando como variables de interés la productividad, rentabilidad, innovación y clima organizacional.
          </div>
            </section>
 
      <section>
            <h4>Revisión de alcance (Scoping review)</h4>
         <audio data-autoplay src="audio/audio11.mp3"></audio>
-     <p style="font-size: 0.8em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema determinado.</p>
- Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que sirve como base para futuras investigaciones.
+     <p style="font-size: 0.8em; text-align: left;"> La revisión de alcance es una síntesis exploratoria que busca identificar y mapear sistemáticamente la amplitud de la evidencia disponible sobre un tema. Por tratarse de una revisión exploratoria, no llega a estimar efectos entre variables ni relaciones de causa y efecto, pero permite saber el estado del arte del tema que nos interesa, lo que sirve como base para investigaciones posteriores.</p>
         </section>
         
         <section>
@@ -214,13 +253,13 @@
 
          <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté terminado.</p>
+         <p> Paso 5: Ahora puedes escribir el Resumen, porque constituye una síntesis condensada de todo el trabajo anterior. Solo podrás redactar un buen resumen cuando el artículo entero esté ya estructurado.</p>
  
         </section>
 
         <section>
           <h3> Orden de redacción recomendable </h3>
-         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas estén actualizadas.</p>
+         <p> Paso 6: Título y Palabras clave: Refínalos al final para asegurarte de que reflejen con exactitud el contenido definitivo del manuscrito. No olvides verificar que tus referencias bibliográficas estén actualizadas y sean consistentes.</p>
    
         </section>
              <section>
